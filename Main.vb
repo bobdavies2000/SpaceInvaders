@@ -23,6 +23,10 @@ Public Class Main
     End Sub
     Private Sub StartGame()
         Player.Location = startLocation
+        label1.Top = Player.Location.Y
+        label2.Top = label1.Top
+        Life1.Top = label1.Top
+        Life2.Top = label1.Top
         Finish.Text = ""
         game = True
         moveLeft = False
@@ -42,7 +46,7 @@ Public Class Main
         Next
     End Sub
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        startLocation = New Size(Player.Location.X, Player.Location.Y)
+        startLocation = New Size(Me.Width / 2, Me.Height - 200)
         StartGame()
     End Sub
     Private Sub Beam(a As PictureBox)
@@ -226,7 +230,7 @@ Class EnemiesClass
         width = 40
         height = 40
         columns = 10
-        rows = 1
+        rows = 5
         space = 10
         x = 150
         y = 0
