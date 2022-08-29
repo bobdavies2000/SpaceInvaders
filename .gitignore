@@ -1,0 +1,11 @@
+obj/*
+bin/*
+*.obj
+*.log
+*.suo
+*.db
+*.opendb
+*.lock
+*.ide
+
+
